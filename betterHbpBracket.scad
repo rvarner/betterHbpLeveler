@@ -4,7 +4,7 @@ width = 22;
 depth = .5;
 
 boltHeadDiameter = 5.43;
-boltHeadDepth = 3;
+boltHeadDepth = 1.75;
 boltHeadFn = 60;
 
 boltThreadsDiameter = 3.2;
@@ -89,14 +89,14 @@ module insetSupportMaterial() {
 
 
 module main() {
-	union()  {
+//	union()  {
 		difference() {
 			boxHeadInsets();
 			translate(v=hole1) holePin();
 			translate(v=hole2) holePin();
 		}
-		finalNutColumn();
-	}
+//		finalNutColumn();
+//	}
 }
 
 
@@ -173,12 +173,12 @@ module finalNutColumn(){
 	}
 }
 
-difference() {
-	main();
-	translate(v=magBoltVector) boltHead();
-}
+//difference() {
+//	main();
+//	translate(v=magBoltVector) boltHead();
+//}
 
 
 
 
-
+main();
